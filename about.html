@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive meta tag -->
+    <title>EcoNic - About Us</title>
+    <style>
+        body {
+            background-image: url('bg.jpg'); /* Ensure the path is correct */
+            background-size: cover; /* Ensure the image covers the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+
+        .header {
+            position: relative;
+            background-color: rgba(102, 171, 195, 0.9); /* Semi-transparent header */
+            padding: 20px 40px; /* Increased padding for better spacing */
+            display: flex; /* Use flexbox for better layout */
+            justify-content: space-between; /* Space between elements */
+            align-items: center; /* Center vertically */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for header */
+        }
+
+        h1 {
+            color: #035167;
+            margin: 0; /* Remove default margin */
+            font-size: 2.5rem; /* Set font size */
+        }
+
+        .nav-links {
+            display: flex; /* Flexbox for navigation */
+            gap: 20px; /* Space between links */
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem; /* Set font size for links */
+            padding: 5px 10px; /* Padding around links */
+            transition: background-color 0.3s; /* Smooth transition */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+        }
+
+        .about-section {
+            background-color: rgba(255, 255, 255, 0.9); /* Light background */
+            padding: 40px;
+            margin: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            text-align: center;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            color: #035167;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .home {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the image */
+            margin: 50px; /* Consistent margin around the home section */
+        }
+
+        img {
+            width: 100%; /* Make image responsive */
+            max-width: 800px; /* Set a maximum width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            padding-top: 20px; /* Padding for top */
+        }
+        .how-it-works-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+            padding: 20px; /* Padding around the text */
+            margin: 30px 10px; /* Margin around the container */
+            border-left: 4px solid #035167; /* Accent border on the left */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            border-radius: 8px; /* Rounded corners for a modern look */
+}
+        .section-title {
+             font-size: 2em;
+             color: #035167; /* Same blue as the rest of the design */
+            margin-bottom: 15px; /* Space below the title */
+             text-align: left; /* Align title to the left */
+             border-bottom: 2px dashed #035167; /* Decorative border below the title */
+            padding-bottom: 5px; /* Padding for the title */
+}
+        p{
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .benefits-container {
+    background-color: rgba(240, 248, 255, 0.9); /* Light blue background */
+    padding: 20px; /* Padding around the content */
+    margin: 30px 10px; /* Margin around the section */
+    border-left: 4px solid #035167; /* Left accent border for visual emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a smooth design */
+}
+
+.section-title {
+    font-size: 2em;
+    color: #035167; /* Same blue as the brand */
+    margin-bottom: 15px; /* Space below the title */
+    text-align: left; /* Align title to the left */
+    border-bottom: 2px dashed #035167; /* Decorative dashed border */
+    padding-bottom: 5px; /* Padding for the title */
+}
+
+.benefits-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove left padding */
+}
+
+.benefits-list li {
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 20px; /* Indent the list items */
+    position: relative; /* Allows custom bullet point placement */
+    font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+}
+
+.benefits-list li::before {
+
+    position: absolute;
+    left: 0; /* Place bullet point to the left of the text */
+    color: #035167; /* Same brand color */
+    font-size: 1.5em; /* Size of the checkmark */
+}
+.footer-container {
+    background-color: #035167; /* Dark blue background */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center the text in the footer */
+    font-size: 1em; /* Standard font size */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Spread sections evenly */
+    flex-wrap: wrap; /* Wrap the sections for smaller screens */
+    max-width: 1200px; /* Limit the width of the footer */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-section {
+    flex-basis: 23%; /* Each section takes up 23% of the width */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #ffffff; /* White titles */
+    margin-bottom: 15px; /* Space under section titles */
+}
+
+.footer-section p,
+.footer-section a {
+    color: #b8d8e5; /* Light blue text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-section a:hover {
+    color: #ffffff; /* Hover effect on links */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.footer-bottom {
+    margin-top: 30px; /* Space above the copyright section */
+    border-top: 1px solid #b8d8e5; /* Light border at the top */
+    padding-top: 10px; /* Padding above the copyright */
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 10px; /* Space between social media icons */
+    font-size: 1.2em; /* Slightly larger font for social media links */
+}
+
+.social-links a:hover {
+    color: #ffffff; /* Hover color for social media links */
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2 style="color: white;">START WITH A CHEW</h2>
+        <h3>
+            <a style="font-weight: bold;" href="home.html">HOME</a>
+            <a style="font-weight: bold;" href="product.html">OUR PRODUCTS</a>
+            <a style="font-weight: bold;" href="about.html">ABOUT</a> <!-- Active link for "About Us" -->
+        </h3>
+    </div>
+
+    <div class="about-section">
+        <h2 class="about-title">About EcoNic</h2>
+        <p class="about-content">
+            At EcoNic, our mission is simple: to help people quit smoking and live healthier lives by offering 
+            a better alternative nicotine gum that promotes well-being. Our team is dedicated to creating the 
+            best products for our customers, ensuring they enjoy the journey towards a smoke-free life.
+            <br><br>
+            Our innovative flavors are designed not only to help reduce nicotine cravings but also to provide 
+            health benefits like clearer skin, improved cognitive function, and enhanced mood. Whether it's 
+            Citrus Delight, Mind Apple, or Berry Glow, each flavor is crafted with care to support you in your 
+            journey to better health.
+        </p>
+    </div>
+    <div class="how-it-works-container">
+        <h2 class="section-title">How EcoNic Works</h2> <!-- Section title -->
+        <p style="padding-left: 25px;">
+            <strong>EcoNic gum</strong> helps individuals quit smoking by delivering a controlled dose of nicotine to manage cravings and withdrawal symptoms. When chewed, it releases nicotine absorbed through the mouth's lining, offering temporary relief without the harmful effects of cigarettes. The gum allows users to gradually reduce their nicotine intake and addresses the oral fixation associated with smoking. Available in different strengths (typically 2 mg and 4 mg), it serves as a valuable tool in a comprehensive smoking cessation strategy, often used alongside behavioral therapy and support programs.
+        </p>
+    </div>
+    <div class="benefits-container">
+        <h2 class="section-title">What are the Benefits</h2> <!-- Section title -->
+        <ul class="benefits-list">
+            <li><strong>Craving Reduction:</strong> Nicotine gum provides a controlled dose of nicotine, helping to manage withdrawal symptoms and reduce cravings without exposing the body to harmful chemicals found in cigarettes.</li>
+            <li><strong>Gradual Weaning:</strong> It allows smokers to gradually lower their nicotine intake, making it easier to quit over time. A structured plan helps individuals taper off nicotine, reducing dependency in a controlled way.</li>
+            <li><strong>Flexible Use:</strong> Nicotine gum can be used on-demand, meaning you can chew a piece whenever you feel a strong urge to smoke. This flexibility offers immediate relief compared to other quit aids like patches.</li>
+            <li><strong>Available Without Prescription:</strong> It is accessible over-the-counter, which makes it a convenient and easy option for many people.</li>
+        </ul>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Company Information -->
+            <div class="footer-section company-info">
+                <h3>EcoNic</h3>
+                <p>Helping you quit smoking, one step at a time. Our nicotine gum offers a safe and effective solution for smokers aiming to quit.</p>
+            </div>
+    
+            <!-- Contact Information -->
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:EcoNic@gmail.com  ">EcoNic@gmail.com</a></p>
+                <p>Phone: 888 1234</p>
+                <p>Address: Batasan Hills</p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-section social-links">
+                <h4>Follow Us</h4>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+    
+
+        </div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 EcoNic. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+    
+
+</body>
+
+</html>

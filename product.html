@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive meta tag -->
+    <title>EcoNic</title>
+    <style>
+        body {
+            background-image: url('bg.jpg'); /* Ensure the path is correct */
+            background-size: cover; /* Ensure the image covers the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+
+        .header {
+            position: relative;
+            background-color: rgba(102, 171, 195, 0.9); /* Semi-transparent header */
+            padding: 20px 40px; /* Increased padding for better spacing */
+            display: flex; /* Use flexbox for better layout */
+            justify-content: space-between; /* Space between elements */
+            align-items: center; /* Center vertically */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for header */
+        }
+
+        h1 {
+            color: #035167;
+            margin: 0; /* Remove default margin */
+            font-size: 2.5rem; /* Set font size */
+        }
+
+        .nav-links {
+            display: flex; /* Flexbox for navigation */
+            gap: 20px; /* Space between links */
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem; /* Set font size for links */
+            padding: 5px 10px; /* Padding around links */
+            transition: background-color 0.3s; /* Smooth transition */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+        }
+
+        .image-container {
+            display: flex; /* Set to flex to align items in a row */
+            flex-direction: column; /* Align items vertically for the title */
+            align-items: center; /* Center the items */
+            padding: 20px; /* Padding around the title */
+        }
+
+        .best-sellers {
+            font-size: 2em; /* Font size for the title */
+            color: #035167; /* Text color */
+            font-weight: bold; /* Bold text */
+            background-color: rgba(255, 255, 255, 0.7); /* Light background for contrast */
+            padding: 10px; /* Padding around the text */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin: 20px 0; /* Space above and below the title */
+            text-align: center; /* Center the title text */
+        }
+
+        .product-container {
+            display: flex; /* Use flexbox for product images */
+            justify-content: center; /* Center the items */
+            margin: 20px; /* Margin around the products */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .image-wrapper {
+            text-align: center;
+            margin: 0 20px; /* Space between images */
+            flex: 1 1 300px; /* Allow images to scale */
+            max-width: 300px; /* Limit the maximum width */
+        }
+
+        .image-wrapper img {
+            width: 100%; /* Responsive width for images */
+            height: auto;
+            border-radius: 10%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for images */
+        }
+
+        .label {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #035167;
+        }
+
+        .footer-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1.2em;
+            color: #035167;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* New styles for the flavor names section */
+        .flavor-section {
+            background-color: #f0f8ff; /* Light background color */
+            padding: 20px; /* Padding around the section */
+            margin-top: 30px; /* Space above the section */
+            border-radius: 8px; /* Rounded corners */
+            border: 2px solid #035167; /* Added border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .flavor-label {
+            font-size: 1.5em;
+            color: #035167;
+            margin: 15px 0; /* Space above and below each label */
+            cursor: pointer; /* Pointer cursor for clickable label */
+            position: relative; /* Position for arrow icon */
+            padding: 10px 0; /* Padding for spacing */
+            border-bottom: 1px dashed #ddd; /* Dashed line below */
+            transition: background-color 0.3s; /* Smooth transition for hover */
+        }
+
+        .flavor-label:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Light hover effect */
+        }
+
+        .description {
+            display: none; /* Initially hidden */
+            margin-top: 5px; /* Space above description */
+            font-size: 1em;
+            color: #555;
+            background-color: #ffffff; /* White background for description */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd; /* Border around description */
+            text-align: left; /* Left-align text */
+            transition: all 0.3s ease; /* Smooth transition for dropdown */
+        }
+
+        .section-title {
+            border: 2px solid #035167; /* Border color and width */
+            border-radius: 5px; /* Optional: rounded corners */
+            padding: 10px; /* Padding around the text */
+            margin: 20px 0; /* Space above and below the title */
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for contrast */
+            text-align: center; /* Center the title text */
+        }
+
+        .home {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the image */
+            margin: 50px; /* Consistent margin around the home section */
+        }
+
+        img {
+            width: 100%; /* Make image responsive */
+            max-width: 800px; /* Set a maximum width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            padding-top: 20px; /* Padding for top */
+        }
+        .footer-container {
+    background-color: #035167; /* Dark blue background */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center the text in the footer */
+    font-size: 1em; /* Standard font size */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Spread sections evenly */
+    flex-wrap: wrap; /* Wrap the sections for smaller screens */
+    max-width: 1200px; /* Limit the width of the footer */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-section {
+    flex-basis: 23%; /* Each section takes up 23% of the width */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #ffffff; /* White titles */
+    margin-bottom: 15px; /* Space under section titles */
+}
+
+.footer-section p,
+.footer-section a {
+    color: #b8d8e5; /* Light blue text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-section a:hover {
+    color: #ffffff; /* Hover effect on links */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.footer-bottom {
+    margin-top: 30px; /* Space above the copyright section */
+    border-top: 1px solid #b8d8e5; /* Light border at the top */
+    padding-top: 10px; /* Padding above the copyright */
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 10px; /* Space between social media icons */
+    font-size: 1.2em; /* Slightly larger font for social media links */
+}
+
+.social-links a:hover {
+    color: #ffffff; /* Hover color for social media links */
+    text-decoration: underline;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2 style = "color: white;">START WITH A CHEW</h2>
+        <h3>
+            <a style= "font-weight: bold;" href="home.html">HOME</a>
+            <a style= "font-weight: bold;" href="product.html">OUR PRODUCTS</a>
+            <a style= "font-weight: bold;" href="about.html">ABOUT</a>
+        </h3>
+    </div>
+
+    <div class="image-container">
+        <img src="order.png" alt="Order Now" style="height: auto; margin-bottom: 20px; max-width: 80%; width: auto;"> <!-- Updated for responsiveness -->
+        <div class="best-sellers">Best Sellers</div>
+    </div>
+
+    <div class="product-container">
+        <div class="image-wrapper">
+            <img src="1.jpg" alt="Citrus Fresh">
+            <div class="label">Citrus Fresh</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="2.jpg" alt="Mind Apple">
+            <div class="label">Mind Apple</div>
+        </div>
+        <div class="image-wrapper">
+            <img src="3.jpg" alt="Berry Glow">
+            <div class="label">Berry Glow</div>
+        </div>
+    </div>
+
+    <!-- New Flavor Names Section -->
+    <div class="flavor-section">
+        <h2 class="section-title">VALUABLE BENEFITS OF EACH FLAVOR</h2> <!-- Added heading here -->
+        <div class="flavor-label" onclick="toggleDescription('desc1')">Citrus Delight <span>&#9660;</span></div>
+        <div id="desc1" class="description">Supports clearer skin while quitting nicotine.</div>
+
+        <div class="flavor-label" onclick="toggleDescription('desc2')">Mind Apple <span>&#9660;</span></div>
+        <div id="desc2" class="description">Aids in boosting memory and cognitive function.</div>
+
+        <div class="flavor-label" onclick="toggleDescription('desc3')">Berry Glow <span>&#9660;</span></div>
+        <div id="desc3" class="description">Enhances mood and overall vitality.</div>
+    </div>
+
+    <div class="footer-message">
+        Trade smoke for strength: choose gum, not cigarettes.
+    </div>
+
+    <script>
+        function toggleDescription(descId) {
+            var desc = document.getElementById(descId);
+            if (desc.style.display === "none" || desc.style.display === "") {
+                desc.style.display = "block"; // Show description
+            } else {
+                desc.style.display = "none"; // Hide description
+            }
+        }
+    </script>
+        <footer class="footer-container">
+            <div class="footer-content">
+                <!-- Company Information -->
+                <div class="footer-section company-info">
+                    <h3>EcoNic</h3>
+                    <p>Helping you quit smoking, one step at a time. Our nicotine gum offers a safe and effective solution for smokers aiming to quit.</p>
+                </div>
+        
+                <!-- Contact Information -->
+                <div class="footer-section contact-info">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:EcoNic@gmail.com  ">EcoNic@gmail.com</a></p>
+                    <p>Phone: 888 1234</p>
+                    <p>Address: Batasan Hills</p>
+                </div>
+        
+                <!-- Social Media Links -->
+                <div class="footer-section social-links">
+                    <h4>Follow Us</h4>
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+        
+    
+            </div>
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoNic. All rights reserved.</p>
+            </div>
+        </footer>
+        
+        
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive meta tag -->
+    <title>EcoNic</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            position: relative;
+            background-color: rgba(102, 171, 195, 0.9);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #035167;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            margin: 0;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 0 20px;
+            font-size: 1.1rem;
+        }
+
+        a:first-child {
+            padding-left: 0;
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            padding-top: 20px;
+        }
+
+        .team {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 1.2em;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team h4 {
+            margin: 20px 0;
+            color: #035167;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            padding: 15px;
+            border: 2px solid #035167;
+            border-radius: 10px;
+            background-color: #e6f7fa;
+            display: inline-block;
+        }
+
+        .team p {
+            margin: 10px 0;
+            color: #333333;
+        }
+
+        .member-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Display in two columns */
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .member-item {
+            background-color: #035167;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-container {
+            background-color: #035167;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex-basis: 23%;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #b8d8e5;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            border-top: 1px solid #b8d8e5;
+            padding-top: 10px;
+        }
+
+        .social-links a {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2 style="color: white;">START WITH A CHEW</h2>
+        <h3>
+            <a style="font-weight: bold;" href="home.html">HOME</a>
+            <a style="font-weight: bold;" href="product.html">OUR PRODUCTS</a>
+            <a style="font-weight: bold;" href="about.html">ABOUT</a>
+        </h3>
+    </div>
+
+    <div class="home">
+        <img src="chan.png" alt="EcoNic">
+    </div>
+
+    <!-- Leader and Members section -->
+    <div class="team">
+        <h4>Leader: Garcia</h4>
+        <p>Members:</p>
+        <div class="member-list">
+            <div class="member-item">Madrid</div>
+            <div class="member-item">Nobleza</div>
+            <div class="member-item">Pu-od</div>
+            <div class="member-item">Clemor</div>
+            <div class="member-item">Fabillar</div>
+            <div class="member-item">Combenido</div>
+            <div class="member-item">Luto</div>
+            <div class="member-item">Paluga</div>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Company Information -->
+            <div class="footer-section company-info">
+                <h3 style="padding-top: 20px;">EcoNic</h3>
+                <p>Helping you quit smoking, one step at a time. Our nicotine gum offers a safe and effective solution for smokers aiming to quit.</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:EcoNic@gmail.com">EcoNic@gmail.com</a></p>
+                <p>Phone: 888 1234</p>
+                <p>Address: Batasan Hills</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-section social-links">
+                <h4>Follow Us</h4>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+
+        </div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 EcoNic. All rights reserved.</p>
+        </div>
+        <p style="text-align: center;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc4bvZ8sMfsIfrWKqnoZqLEHnk4SuakG_Bt0l9yZQBVFZAUyw/viewform?fbclid=IwY2xjawF1a9NleHRuA2FlbQIxMAABHXb-b5mD84--BxjlEebfSNLe9dAK-_0FD-880lWDUth2BTDV4xdJtb5SMA_aem_UILSiETPUrbe1BcJ4gei5A" target="_blank">EcoNic Survey</a></p>
+        <p style="text-align: center;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfgyU9PtYg8_Qgr0gbLQpj_rzX9egOhYV1xBy3JJ8JyctIZig/viewform?fbclid=IwY2xjawF1csBleHRuA2FlbQIxMAABHUcIULA50agKadUQBY6kzrm7mz79687KzirUfl4lSak2XeavzpHYAxejCQ_aem_kpFiyiN1Y9ubmnfVwzXbDA" target="_blank">EcoNic Evaluation</a></p>
+
+    </footer>
+</body>
+
+</html>
